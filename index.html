@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- main template css file -->
-    <link rel="stylesheet" href="css/leon.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Render oll elements normaly -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- font awesome library -->
@@ -14,7 +14,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Dancing+Script:wght@400;500;700&family=DynaPuff:wght@500&display=swap"
         rel="stylesheet">
     <title>Document</title>
 </head>
@@ -23,14 +23,19 @@
     <!-- Start Header -->
     <div class="header">
         <div class="container">
-            <img class="logo" src="imgs/logo.png" alt="">
+            <div class="logo-container">
+                <img class="logo" src="imgs/logo2.png" alt="">
+                <div class="text">
+                    Programming Oassis
+                </div>
+            </div>            
             <div class="links">
-                <span class="icon">
+                <span class="icon" onclick="menuToggle();">
                     <span></span>
-                    <span></span>
+                    <span id="inSpan"></span>
                     <span></span>
                 </span>
-                <ul>
+                <ul id="menu" style="display: none;">
                     <li><a href="#features">features</a></li>
                     <li><a href="#services">services</a></li>
                     <li><a href="#protofolio">protofolio</a></li>
@@ -46,7 +51,7 @@
     <div class="landing">
         <div class="intro-text">
             <h1>Hello There</h1>
-            <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
+            <p>We are 'Programming Oassis' - Super Creative Programming company</p>
         </div>
     </div>
     <!-- End landing -->
@@ -217,9 +222,23 @@
     <!-- End contact -->
     <!-- Start footer -->
     <div class="footer">
-        &copy; 2021 <span>Leon</span> All Right Reserved
+        &copy; 2021 <span>programming</span> All Right Reserved
     </div>
     <!-- End footer -->
+    <script>
+        menu   =  document.getElementById('menu')
+        inspan = document.getElementById('inSpan')
+        console.log(menu.style.display)
+        function menuToggle(){
+            if (menu.style.display == 'none'){
+                menu.style.display = 'block'
+                inspan.style.width = '100%'
+            }else{
+                menu.style.display = 'none'
+                inspan.style.width = '50%'
+            }
+        }
+    </script>
 </body>
 
 </html>
